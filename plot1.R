@@ -1,5 +1,6 @@
 ## This first line will likely take a few seconds. Be patient!
 NEI <- readRDS("./exdata-data-NEI_data/summarySCC_PM25.rds")
+SCC <- readRDS("./exdata-data-NEI_data/Source_Classification_Code.rds")
 TotalEmissionsXyr <- aggregate(Emissions ~ year, NEI, sum, simplify=TRUE)
 # aggregate(expressions, data, function)
 png("plot1.png")

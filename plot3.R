@@ -10,5 +10,6 @@ TotalEmissionsXyrXtype <- aggregate(Emissions ~ year + type, DataBaltimore, sum,
 png("plot3.png")
 g1 <- qplot(x=year, y=Emissions, data=TotalEmissionsXyrXtype, geom="line", stat="identity", color = type)
 g1 <- g1 + ylab("Total P2.5 Emssions") + ggtitle("Total P2.5 Emissions in Baltimore city by type")
+g1 <- g1 + geom_point(color="blue") 
 plot(g1)
 dev.off()
